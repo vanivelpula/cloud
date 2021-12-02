@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Distributed Whiteboard</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+
+  <!-- Modal -->
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1>WhiteBoard</h1>
+      </div>
+      <div class="col-12">
+        <div id="board">
+          <canvas class="shadow-lg" id="myCanvas" width="980px" height="600px">
+            Sorry, your browser doesn't support canvas technology.
+          </canvas>
+          <!-- <p>Color picker: <select id="selectColor">
+                        <option id="colBlack" value="black" selected="selected">Black</option>
+                        <option id="colRed" value="red">Red</option>
+                        <option id="colBlue" value="blue">Blue</option>
+                        <option id="colGreen" value="green">Green</option>
+                        <option id="colOrange" value="orange">Orange</option>
+                        <option id="colYellow" value="yellow">Yellow</option>
+      </select>
+      </p> -->
+          <div class="row p-5 text-center">
+            <fieldset id="selectColor"  style="background-color: whitesmoke;">
+              <h3>Pen Color : </h3>
+              <input type="radio" value="red" id="colRed" checked name="selectColor1">
+              <label for="colRed" style="color:red">Red</label> |
+      
+              <input type="radio" id="colBlack" value="black" name="selectColor1">
+              <label for="colBlack">Black</label> |
+      
+              <input type="radio" id="colPink" value="pink" name="selectColor1">
+              <label for="colPink" style="color:pink">pink</label> |
+      
+              <input type="radio" id="colBlue" value="blue" name="selectColor1">
+              <label for="colBlue" style="color:blue">Blue</label> |
+      
+              <input type="radio" id="colGrey" value="grey" name="selectColor1">
+              <label for="colGrey" style="color:grey">Grey</label>
+            </fieldset>
+          </div>
+      
+          <!-- <p>Select a maintenance drone:</p>
+      
+      <div>
+        <input type="radio" id="colBlack" name="drone" value="black" 
+               checked>
+        
+      </div>
+      
+      <div>
+        <input type="radio" id="colRed" name="drone" value="red">
+        <label for="dewey">Red</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="louie" name="drone" value="louie">
+        <label for="louie">Louie</label>
+      </div> -->
+      
+        </div><!-- END board -->
+      </div>
+      <div class="col-4">
+        <div id="">
+          <div id="chatUser" class="fixedHeader"></div>
+          <div class="fixedContent"></div>
+          <div class="chatbox">
+            <input class="userinput" placeholder="Ask your Question here">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
